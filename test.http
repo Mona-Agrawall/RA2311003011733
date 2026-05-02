@@ -1,0 +1,53 @@
+### REGISTER (run only once)
+POST http://20.207.122.201/evaluation-service/register
+Content-Type: application/json
+
+{
+  "name": "Mona Mahendra Kumar Agrawal",
+  "email": "ma0705@srmist.edu.in",
+  "mobileNo": "6386010846",
+  "githubUsername": "Mona-Agrawall",
+  "rollNo": "RA2311003011733",
+  "accessCode": "QkbpxH"
+}
+
+###
+
+### AUTH (get token)
+POST http://20.207.122.201/evaluation-service/auth
+Content-Type: application/json
+
+{
+  "name": "Mona Agrawall",
+  "email": "ma0705@srmist.edu.in",
+  "rollNo": "RA2311003011733",
+  "clientID": "2bccd931-b1b2-4df4-bdde-d17694a38d84",
+  "clientSecret": "kQmnhXBfKEMdngdw",
+  "accessCode": "QkbpxH"
+}
+
+###
+
+### GET DEPOTS
+GET http://20.207.122.201/evaluation-service/depots
+Authorization: Bearer YOUR_TOKEN_HERE
+
+###
+
+### GET VEHICLES
+GET http://20.207.122.201/evaluation-service/vehicles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJtYTA3MDVAc3JtaXN0LmVkdS5pbiIsImV4cCI6MTc3NzcwMDk2MywiaWF0IjoxNzc3NzAwMDYzLCJpc3MiOiJBZmZvcmQgTWVkaWNhbCBUZWNobm9sb2dpZXMgUHJpdmF0ZSBMaW1pdGVkIiwianRpIjoiOWQ0YTZkNzQtYTJjZC00MWI2LWE1Y2QtOGZmZDQ4YzhhNzJiIiwibG9jYWxlIjoiZW4tSU4iLCJuYW1lIjoibW9uYSBhZ3Jhd2FsbCIsInN1YiI6IjJiY2NkOTMxLWIxYjItNGRmNC1iZGRlLWQxNzY5NGEzOGQ4NCJ9LCJlbWFpbCI6Im1hMDcwNUBzcm1pc3QuZWR1LmluIiwibmFtZSI6Im1vbmEgYWdyYXdhbGwiLCJyb2xsTm8iOiJyYTIzMTEwMDMwMTE3MzMiLCJhY2Nlc3NDb2RlIjoiUWticHhIIiwiY2xpZW50SUQiOiIyYmNjZDkzMS1iMWIyLTRkZjQtYmRkZS1kMTc2OTRhMzhkODQiLCJjbGllbnRTZWNyZXQiOiJrUW1uaFhCZktFTWRuZ2R3In0.Fo33qWJnXFARBUJf8s5pQeBG5A4jGyYd_80Pwm7kfqo
+
+###
+
+### SEND LOG
+POST http://20.207.122.201/evaluation-service/logs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJtYTA3MDVAc3JtaXN0LmVkdS5pbiIsImV4cCI6MTc3NzcwMDk2MywiaWF0IjoxNzc3NzAwMDYzLCJpc3MiOiJBZmZvcmQgTWVkaWNhbCBUZWNobm9sb2dpZXMgUHJpdmF0ZSBMaW1pdGVkIiwianRpIjoiOWQ0YTZkNzQtYTJjZC00MWI2LWE1Y2QtOGZmZDQ4YzhhNzJiIiwibG9jYWxlIjoiZW4tSU4iLCJuYW1lIjoibW9uYSBhZ3Jhd2FsbCIsInN1YiI6IjJiY2NkOTMxLWIxYjItNGRmNC1iZGRlLWQxNzY5NGEzOGQ4NCJ9LCJlbWFpbCI6Im1hMDcwNUBzcm1pc3QuZWR1LmluIiwibmFtZSI6Im1vbmEgYWdyYXdhbGwiLCJyb2xsTm8iOiJyYTIzMTEwMDMwMTE3MzMiLCJhY2Nlc3NDb2RlIjoiUWticHhIIiwiY2xpZW50SUQiOiIyYmNjZDkzMS1iMWIyLTRkZjQtYmRkZS1kMTc2OTRhMzhkODQiLCJjbGllbnRTZWNyZXQiOiJrUW1uaFhCZktFTWRuZ2R3In0.Fo33qWJnXFARBUJf8s5pQeBG5A4jGyYd_80Pwm7kfqo
+
+{
+  "stack": "backend",
+  "level": "info",
+  "package": "service",
+  "message": "test log from REST Client"
+}
